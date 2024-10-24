@@ -31,7 +31,7 @@ Console.WriteLine();
 
 Console.Write("c) ");
 for (uint i = a; i <= b; i++) {
-    if (SumOfDigits(i) % 2 == 0) {
+    if (SumOfDigits(i) % 2 == 1) {
         Console.Write("{0} ", i);
     }
 }
@@ -45,11 +45,8 @@ uint sumA = SumOfDigits(A);
 if (A < 10) {
     Console.WriteLine("d) not found");
 } else {
-    while (true) {
+    do {
         currentNum--;
-        if (SumOfDigits(currentNum) == sumA) {
-            break;
-        }
-    }
+    } while (SumOfDigits(currentNum) != sumA);
     Console.WriteLine("d) {0}", currentNum);
 }
